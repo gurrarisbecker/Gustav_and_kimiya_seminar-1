@@ -68,6 +68,13 @@ CREATE TABLE teaching_activity (
   factor        NUMERIC(5,2)
 );
 
+CREATE TABLE teacher_rules (
+  rule_id SERIAL PRIMARY KEY,
+  max_courses_per_period INT NOT NULL
+);
+
+INSERT INTO teacher_rules (max_courses_per_period)
+VALUES(4);
 
 CREATE TABLE course_instance (
   instance_id       VARCHAR(100) PRIMARY KEY,
