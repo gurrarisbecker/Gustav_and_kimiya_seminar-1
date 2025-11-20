@@ -65,10 +65,11 @@ CREATE TABLE "teaching_activity" (
  "factor" FLOAT(10)
 );
 
+CREATE TYPE study_period_enum AS ENUM ('P1', 'P2', 'P3', 'P4');
 
-CREATE TABLE "course_instace" (
+CREATE TABLE "course_instance" (
  "instance_id" VARCHAR(100) NOT NULL PRIMARY KEY,
- "study_period " VARCHAR(100),
+ "study_period" study_period_enum NOT NULL,
  "num_students " INT,
  "course_layout_id" INT NOT NULL,
  "study_year " INT,
